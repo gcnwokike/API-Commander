@@ -1,0 +1,130 @@
+{
+  "name": "api-commander",
+  "displayName": "API Commander",
+  "description": "A Minimalistic VS Code extension for sending and managing API requests.",
+  "version": "1.0.1",
+  "publisher": "API Commander",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:api-commander.showPanel"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "api-commander.showPanel",
+        "title": "Open API Commander",
+        "icon": {
+          "light": "icons/16.png",
+          "dark": "icons/i6.png"
+        }
+      },
+      {
+        "command": "api-commander.refresh-history",
+        "title": "Refresh API History",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "api-commander.newRequestFromSidebar",
+        "title": "New Request (API Commander)"
+      },
+      {
+        "command": "api-commander.newRequest",
+        "title": "New Request"
+      },
+      {
+        "command": "api-commander.clear-all-history",
+        "title": "Clear All API History"
+      },
+      {
+        "command": "api-commander.importSession",
+        "title": "Import Session",
+        "icon": "$(cloud-upload)"
+      },
+      {
+        "command": "api-commander.runFromHistory",
+        "title": "Run",
+        "icon": "$(run)"
+      },
+      {
+        "command": "api-commander.exportFromHistory",
+        "title": "Export",
+        "icon": "$(export)"
+      },
+      {
+        "command": "api-commander.deleteFromHistory",
+        "title": "Delete",
+        "icon": "$(trash)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "api-commander-container",
+          "title": "API Commander",
+          "icon": "./icons/32.png"
+        }
+      ]
+    },
+    "views": {
+      "api-commander-container": [
+        {
+          "id": "apiCommanderView",
+          "name": "History",
+          "contextualTitle": "API Commander",
+          "icon": "./icons/32.png"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "api-commander.refresh-history",
+          "when": "view == apiCommanderView",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "api-commander.runFromHistory",
+          "when": "view == apiCommanderView && viewItem == historyItem",
+          "group": "inline"
+        },
+        {
+          "command": "api-commander.exportFromHistory",
+          "when": "view == apiCommanderView && viewItem == historyItem",
+          "group": "inline"
+        },
+        {
+          "command": "api-commander.deleteFromHistory",
+          "when": "view == apiCommanderView && viewItem == historyItem",
+          "group": "inline"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "vsce": "^2.15.0"
+  },
+  "dependencies": {
+    "aws4": "^1.12.0",
+    "axios": "^1.7.8",
+    "crypto-js": "^4.2.0",
+    "form-data": "^4.0.0",
+    "graphql": "^16.11.0",
+    "node-fetch": "^3.3.2"
+  }
+}

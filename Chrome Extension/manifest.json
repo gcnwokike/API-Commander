@@ -1,0 +1,37 @@
+{
+  "name": "API Commander",
+  "version": "1.0.1",
+  "description": "API Commander is a cross-platform API testing application, allowing users to send various HTTP requests with diverse body types.",
+  "manifest_version": 3,
+  "devtools_page": "devtools.html",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "64": "icons/64.png",
+      "128": "icons/128.png"
+    },
+    "default_title": "API Commander"
+  },
+  "icons": {
+    "128": "icons/128.png",
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "contextMenus",
+    "clipboardWrite",
+    "clipboardRead"
+  ],
+  "host_permissions": ["<all_urls>"]
+}

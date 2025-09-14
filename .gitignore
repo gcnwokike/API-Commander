@@ -1,0 +1,67 @@
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignore editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore build and output directories
+build/
+dist/
+out/
+target/
+
+# Ignore dependency directories
+node_modules/
+bower_components/
+vendor/
+
+# Ignore log and temp files
+*.log
+*.tmp
+*.temp
+
+# Ignore environment variables and configuration files
+.env
+.env.example
+config.json
+
+# Ignore IDE and editor cache files
+*.cache
+*.iml
+
+# Ignore version control system files
+.git/
+.hg/
+.svn/
+
+# Ignore macOS files
+*.dmg
+*.pkg
+*.mpkg
+
+# Ignore Windows files
+*.exe
+*.dll
+
+# Ignore Linux files
+*.deb
+*.rpm
+
+# Ignore archives and compressed files
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+
+# Ignore other files
+*.bak
+*.orig
+*.swp
