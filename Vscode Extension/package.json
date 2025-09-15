@@ -2,7 +2,7 @@
   "name": "api-commander",
   "displayName": "API Commander",
   "description": "A minimalistic VS Code extension for sending and managing API requests.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "gcnwokike",
   "icon": "icons/128-B.png",
   "engines": {
