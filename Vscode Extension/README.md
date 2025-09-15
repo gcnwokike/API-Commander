@@ -1,4 +1,12 @@
+<p align="center">
+  <img src="icons/128.png" width="100" height="100" alt="Icon">
+</p>
+
 # API Commander: A Minimalistic VS Code Extension for API Requests
+
+<p align="center">
+  <img src="icons/screenshot.png" alt="Icon">
+</p>
 
 ## Description
 
